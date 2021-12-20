@@ -337,13 +337,14 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = MNQ5D2G6V5;
+						DevelopmentTeam = 7N3PC9Y3J3;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = MNQ5D2G6V5;
+						DevelopmentTeam = 7N3PC9Y3J3;
 						LastSwiftMigration = 1030;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -623,7 +624,7 @@
 			baseConfigurationReference = EF5D81F6506FD909980DB629 /* Pods-UBottomSheet_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MNQ5D2G6V5;
+				DEVELOPMENT_TEAM = 7N3PC9Y3J3;
 				INFOPLIST_FILE = UBottomSheet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -638,7 +639,7 @@
 			baseConfigurationReference = 749C82EB702B7DD083070E9B /* Pods-UBottomSheet_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MNQ5D2G6V5;
+				DEVELOPMENT_TEAM = 7N3PC9Y3J3;
 				INFOPLIST_FILE = UBottomSheet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -652,7 +653,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B60E5BBF9F733F4E32A6B85A /* Pods-UBottomSheet_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = MNQ5D2G6V5;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7N3PC9Y3J3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -665,6 +669,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UBottomSheet_Example.app/UBottomSheet_Example";
 			};
@@ -674,7 +680,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A21DD335D8E116605BA40B2D /* Pods-UBottomSheet_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = MNQ5D2G6V5;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7N3PC9Y3J3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -683,6 +692,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UBottomSheet_Example.app/UBottomSheet_Example";
 			};
