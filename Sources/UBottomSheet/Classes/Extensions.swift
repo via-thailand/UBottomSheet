@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
     func ub_add(_ child: UIViewController,
                 in container: UIView,
-                animated: Bool = true,
+                animated: Bool = false,
                 topInset: CGFloat,
                 completion: (() -> Void)? = nil) {
         addChild(child)
@@ -21,20 +21,13 @@ extension UIViewController {
                            y: view.frame.minY,
                            width: view.frame.width,
                            height: view.frame.maxY - topInset)
-        if animated {
-            container.frame = frame.offsetBy(dx: 0, dy: frame.height)
-            child.view.frame = container.bounds
-            UIView.animate(withDuration: 0.3, animations: {
-                container.frame = frame
-            }) { _ in
-                completion?()
-            }
-        } else {
+        container.frame = frame.offsetBy(dx: 0, dy: frame.height)
+        child.view.frame = container.bounds
+        UIView.animate(withDuration: animated ? 0.3: 0, animations: {
             container.frame = frame
-            child.view.frame = container.bounds
+        }) { _ in
             completion?()
         }
-        
     }
 
     func ub_remove() {
